@@ -4,12 +4,9 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoia3IzNDE4IiwiYSI6ImNtbnl3Zmx5cjA2cTQycXBtb3Jxd
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v11',
-  
     center: [9.5, 39.5],
     zoom: 4,
-  
     minZoom: 4,
-  
     maxBounds: [
       [-10, 30],  // southwest corner 
       [25, 48]    // northeast corner
@@ -18,7 +15,7 @@ const map = new mapboxgl.Map({
 
 map.addControl(new mapboxgl.NavigationControl());
 
-/* Country color map */
+// Country colors
 const countryColors = {
   Spain: '#e63946',    // red
   Tunisia: '#2ecc71',  // green 
@@ -26,7 +23,7 @@ const countryColors = {
   France: '#3498db'    // blue 
 };
 
-/* Locations visited */
+// Array of locations visited
 const locations = [
   {
     city: 'Barcelona',
@@ -71,7 +68,7 @@ const locations = [
     image: 'pictures/Marseille.jpeg'
   }
 ];
-
+// looping through locations and giving it color/marker/popup//
 locations.forEach((place) => {
     const color = countryColors[place.country] || '#000000';
   
@@ -82,7 +79,7 @@ locations.forEach((place) => {
       <div class="marker-pin" style="background-color: ${color};"></div>
       <div class="marker-label" style="color: ${color};">${place.city}</div>
     `;
-  
+  // Creating popup and its contents
     const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(`
       <div class="popup-content">
         <h3>${place.city}, ${place.country}</h3>
@@ -90,7 +87,7 @@ locations.forEach((place) => {
         <img src="${place.image}" alt="${place.city}">
       </div>
     `);
-  
+  //Adding the markers to the map
     new mapboxgl.Marker(markerEl)
       .setLngLat(place.coords)
       .setPopup(popup)
