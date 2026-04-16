@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kennys Cruise trip through the Mediterranean</title>
+
+  <!-- Bringing in Mapbox -->
+  <link
+    href="https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="page-header">
+    <h1>Kennys cruise trip through the Mediterranean</h1>
+    <p>Click the markers to learn a fun fact and see my pictures!</p>
+  </header>
+
+  <!-- legend categorized by country -->
+  <section class="legend">
+    <h2>Trip Schedule</h2>
+    <ul>
+      <li><span class="legend-color spain"></span> Barcelona (Home Port)</li>
+      <li><span class="legend-color tunisia"></span> Tunis — Day 3</li>
+      <li><span class="legend-color italy"></span> Palermo — Day 4</li>
+      <li><span class="legend-color italy"></span> Naples — Day 5</li>
+      <li><span class="legend-color italy"></span> Genova — Day 7</li>
+      <li><span class="legend-color france"></span> Marseille — Day 8</li>
+    </ul>
+  </section>
+
+   <!-- creating the map container -->
+  <div id="map"></div>
+
+<!-- loading mapblox js and js -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
