@@ -75,14 +75,14 @@
     height: calc(100vh - 90px);
   }
   
-  /* Markers */
+  /* Marker positioning */
   .custom-marker {
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
   }
-  
+  /* Marker styling */
   .marker-pin {
     width: 20px;
     height: 20px;
@@ -90,7 +90,7 @@
     border: 2px solid white;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
   }
-  
+  /* Styling text of marker */
   .marker-label {
     margin-top: 6px;
     padding: 4px 8px;
@@ -103,7 +103,7 @@
     border: 1px solid #ddd;
   }
   
-  /* Popup */
+  /* Popup styling */
   .mapboxgl-popup {
     max-width: 260px;
   }
