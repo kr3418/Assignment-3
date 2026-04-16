@@ -47,7 +47,7 @@ const locations = [
     country: 'Italy',
     coords: [13.3615, 38.1157],
     funFact: 'Fun and lively city. The best pasta I ever had was here.',
-    image: 'pictures/palermo.jpeg'
+    image: 'pictures/Palermo.jpeg'
   },
   {
     city: 'Genova',
